@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Spectral';
+}
+
+/* Style the header */
+header {
+  background-color: #050A5C;
+  padding: 10px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 20%;
+  background: #ccc;
+  padding: 20px;
+  background-color: #E4FAFE;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 80%;
+  background-color: #ECECEE;
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>Emma Castiglia</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">About Me</a></li>
+      <li><a href="#">CV</a></li>
+      <li><a href="#">Resume</a></li>
+      <li><a href="#">Research</a></li>
+      <li><a href="#">Teaching</a></li>
+
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>About Me</h1>
+    
+    <img src="img_girl.jpg" alt="Girl in a jacket">
+
+    <p>I am a 6th year Ph.D. Candidate in physics at Yale University, with a focus on applying machine learning to improve detector performance and optimize signal sensitivity at the ATLAS experiment. .</p>
+
+  </article>
+</section>
+
+<footer>
+  <p>Footer</p>
+</footer>
+
+</body>
+</html>
